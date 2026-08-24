@@ -34,7 +34,7 @@ docs/       运行说明、截图和演示材料
 - [x] 转换标注并划分数据集
 - [x] 训练与评估模型
 - [ ] 部署到 Jetson
-- [ ] 实现 ROS 2 结果发布
+- [x] 编写 ROS 2 结果发布与验收记录程序
 - [ ] 完成 20 个物体的验收测试
 - [ ] 完成 LaTeX 实验报告
 
@@ -92,3 +92,50 @@ cd "E:\机器人集成小组项目"
 YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
 
 独立测试集评估结果见 [`results/test/yolo26n/README.md`](results/test/yolo26n/README.md)。测试集总体 Precision 为0.9922、Recall 为0.9491、mAP@0.5 为0.9887、mAP@0.5:0.95 为0.8934。
+
+## ROS 2 检测与验收记录
+
+ROS 2 Python 包位于 `ros2_ws/src/pencil_tennis_detector`，以 ROS 2 Humble 为目标版本。实际运行需要 Ubuntu/Jetson 上已安装 ROS 2、`cv_bridge`、OpenCV、Ultralytics 和匹配 CUDA 的 PyTorch。
+
+在仓库根目录构建：
+
+```bash
+source /opt/ros/humble/setup.bash
+cd ros2_ws
+colcon build --symlink-install
+source install/setup.bash
+```
+
+回到仓库根目录启动摄像头检测节点：
+
+```bash
+cd ..
+ros2 launch pencil_tennis_detector detector.launch.py \
+  model:=$(pwd)/models/pencil_tennis_yolo26n_best.pt \
+  camera:=0 confidence:=0.25 device:=cuda:0
+```
+
+节点发布以下话题：
+
+- `/detection/image`：`sensor_msgs/Image`，包含检测框、类别、置信度和 FPS。
+- `/detection/results`：`std_msgs/String`，包含每帧检测结果 JSON。
+- `/detection/fps`：`std_msgs/Float32`，包含端到端实时速度。
+
+可在另一个已经 source 工作空间的终端检查：
+
+```bash
+ros2 topic echo /detection/results
+ros2 topic echo /detection/fps
+ros2 run rqt_image_view rqt_image_view /detection/image
+```
+
+进行20个物体的人工验收记录时，在另一个终端运行：
+
+```bash
+source /opt/ros/humble/setup.bash
+source ros2_ws/install/setup.bash
+ros2 run pencil_tennis_detector test_recorder_node \
+  --ros-args -p target_count:=20 -p output_root:=$(pwd)/results/jetson_test
+```
+
+每次把一个待测物体放到摄像头前，输入其预期类别 `pencil` 或 `tennis_ball` 并回车。程序取最近一帧中置信度最高的检测作为该次结果。完成20项后自动生成 `test_records.csv` 和 `summary.json`，统计正确率、平均/最低 FPS，并判断是否达到20项、80%正确率和最低5 FPS要求。输入 `q` 可提前结束。
