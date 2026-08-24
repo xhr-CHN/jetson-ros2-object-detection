@@ -77,6 +77,16 @@ cd "E:\机器人集成小组项目"
 
 总体及逐类指标保存到 `results/test/yolo26n/metrics.json`，验证图表保存到 `results/test/yolo26n/validation/`，83张带检测框的预测图片保存到 `results/test/yolo26n/predictions/`。
 
+### Windows 摄像头实时检测
+
+打开默认摄像头并实时显示类别、检测框、置信度和 FPS：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\webcam_yolo26n_windows.py
+```
+
+按 `Q` 或 `Esc` 退出。可使用 `--camera 1` 切换摄像头，或使用 `--conf 0.4` 调整置信度阈值。该脚本只实时显示，不录像或保存图片。
+
 ## 已训练模型
 
 YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
