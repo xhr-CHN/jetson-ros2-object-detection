@@ -25,6 +25,11 @@ def parse_args() -> argparse.Namespace:
         help="Run a 3-epoch smoke test instead of the 100-epoch formal training.",
     )
     parser.add_argument(
+        "--augmented",
+        action="store_true",
+        help="Use a distinct run name for the augmented Roboflow dataset.",
+    )
+    parser.add_argument(
         "--epochs",
         type=int,
         default=None,
@@ -55,6 +60,14 @@ def check_environment() -> None:
 
 def build_training_args(args: argparse.Namespace) -> dict[str, object]:
     epochs = args.epochs if args.epochs is not None else (3 if args.smoke else 100)
+    if args.augmented:
+        run_name = (
+            "pencil_tennis_yolo26n_augmented_smoke"
+            if args.smoke
+            else "pencil_tennis_yolo26n_augmented"
+        )
+    else:
+        run_name = "yolo26n_smoke" if args.smoke else "pencil_tennis_yolo26n"
     return {
         "data": str(DATA_CONFIG),
         "epochs": epochs,
@@ -64,7 +77,7 @@ def build_training_args(args: argparse.Namespace) -> dict[str, object]:
         "workers": 0,
         "patience": 20,
         "project": str(RUNS_DIR),
-        "name": "yolo26n_smoke" if args.smoke else "pencil_tennis_yolo26n",
+        "name": run_name,
         "plots": True,
         "save": True,
     }

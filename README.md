@@ -65,6 +65,30 @@ cd "E:\机器人集成小组项目"
 & "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\train_yolo26n_windows.py --batch 4
 ```
 
+### Roboflow 补充数据增强训练
+
+项目另外使用 Roboflow Universe 的 [Pencil v2](https://universe.roboflow.com/workspace1-1gbmx/pencil-tvhes/dataset/2) 和 [Tennis ball v1](https://universe.roboflow.com/tennis-3ll0a/tennis-ball-icifx/dataset/1) 补充数据。五种铅笔子类统一为 `pencil`，网球统一为 `tennis_ball`。完整来源、许可证、类别映射和最终统计见 [`dataset/SOURCES.md`](dataset/SOURCES.md)。
+
+从本地 ZIP 可重复整理补充数据：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" tools\merge_roboflow_yolo_datasets.py
+```
+
+先执行增强数据冒烟训练：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\train_yolo26n_windows.py --augmented --smoke
+```
+
+确认无误后执行正式增强训练：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\train_yolo26n_windows.py --augmented
+```
+
+增强训练输出单独保存在 `runs/pencil_tennis_yolo26n_augmented/`，不会直接覆盖当前正式模型。
+
 最佳模型默认保存在 `runs/pencil_tennis_yolo26n/weights/best.pt`。脚本不会在 CUDA 不可用时自动退回 CPU。
 
 ### 独立测试集评估
