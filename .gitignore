@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Training caches and generated runs
+runs/
+wandb/
+
+# Large generated deployment artifacts
+*.engine
+*.onnx
+*.pt
+
+# ROS 2 generated directories
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# OS files
+.DS_Store
+Thumbs.db
+
