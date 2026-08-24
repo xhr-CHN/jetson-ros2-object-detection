@@ -1,0 +1,46 @@
+{
+  "evaluated_at_utc": "2026-08-24T07:47:08.489922+00:00",
+  "model": "E:\\机器人集成小组项目\\models\\pencil_tennis_yolo26n_best.pt",
+  "data": "E:\\机器人集成小组项目\\dataset\\data-windows.yaml",
+  "test_images": 83,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "parameters": {
+    "split": "test",
+    "imgsz": 640,
+    "batch": 8,
+    "device": 0,
+    "workers": 0,
+    "prediction_confidence": 0.25
+  },
+  "overall": {
+    "metrics/precision(B)": 0.9921862011383507,
+    "metrics/recall(B)": 0.949111848652733,
+    "metrics/mAP50(B)": 0.9887024535423925,
+    "metrics/mAP50-95(B)": 0.8933599235911999,
+    "fitness": 0.8933599235911999
+  },
+  "per_class": [
+    {
+      "Class": "pencil",
+      "Images": 60,
+      "Instances": 80,
+      "Box-P": 0.98437,
+      "Box-R": 0.9875,
+      "Box-F1": 0.98593,
+      "mAP50": 0.99288,
+      "mAP50-95": 0.95701
+    },
+    {
+      "Class": "tennis_ball",
+      "Images": 23,
+      "Instances": 23,
+      "Box-P": 1.0,
+      "Box-R": 0.91072,
+      "Box-F1": 0.95328,
+      "mAP50": 0.98452,
+      "mAP50-95": 0.82971
+    }
+  ],
+  "prediction_images": 83,
+  "prediction_label_files": 83
+}

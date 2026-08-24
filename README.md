@@ -32,7 +32,7 @@ docs/       运行说明、截图和演示材料
 - [x] 初始化项目及 Git 仓库
 - [x] 获取公开数据集
 - [x] 转换标注并划分数据集
-- [ ] 训练与评估模型
+- [x] 训练与评估模型
 - [ ] 部署到 Jetson
 - [ ] 实现 ROS 2 结果发布
 - [ ] 完成 20 个物体的验收测试
@@ -67,6 +67,18 @@ cd "E:\机器人集成小组项目"
 
 最佳模型默认保存在 `runs/pencil_tennis_yolo26n/weights/best.pt`。脚本不会在 CUDA 不可用时自动退回 CPU。
 
+### 独立测试集评估
+
+使用未参与训练与最佳权重选择的测试集评估模型：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\evaluate_yolo26n_windows.py
+```
+
+总体及逐类指标保存到 `results/test/yolo26n/metrics.json`，验证图表保存到 `results/test/yolo26n/validation/`，83张带检测框的预测图片保存到 `results/test/yolo26n/predictions/`。
+
 ## 已训练模型
 
 YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
+
+独立测试集评估结果见 [`results/test/yolo26n/README.md`](results/test/yolo26n/README.md)。测试集总体 Precision 为0.9922、Recall 为0.9491、mAP@0.5 为0.9887、mAP@0.5:0.95 为0.8934。
