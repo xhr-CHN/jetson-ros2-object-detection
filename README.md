@@ -66,3 +66,7 @@ cd "E:\机器人集成小组项目"
 ```
 
 最佳模型默认保存在 `runs/pencil_tennis_yolo26n/weights/best.pt`。脚本不会在 CUDA 不可用时自动退回 CPU。
+
+## 已训练模型
+
+YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。

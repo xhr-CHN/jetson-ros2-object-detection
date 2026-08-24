@@ -19,6 +19,7 @@ tennis/
 *.engine
 *.onnx
 *.pt
+!models/pencil_tennis_yolo26n_best.pt
 
 # ROS 2 generated directories
 ros2_ws/build/
