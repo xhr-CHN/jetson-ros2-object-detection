@@ -9,6 +9,7 @@ venv/
 # Training caches and generated runs
 runs/
 wandb/
+*.cache
 
 # Original downloaded datasets (the normalized YOLO copy is under dataset/)
 pencil_dataset/

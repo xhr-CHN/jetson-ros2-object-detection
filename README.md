@@ -18,7 +18,7 @@
 ## 项目结构
 
 ```text
-dataset/    自采图片、标签和数据集配置
+dataset/    公开数据集图片、标签和数据配置
 models/     模型说明及部署产物
 src/        训练、推理和测试程序
 ros2_ws/    ROS 2 工作空间
@@ -41,3 +41,28 @@ docs/       运行说明、截图和演示材料
 ## 数据来源
 
 本项目使用 Mendeley Data 的网球数据集和 Kaggle 的铅笔数据集，并统一转换为两类 YOLO 标注。完整引用、许可证和处理说明见 [`dataset/SOURCES.md`](dataset/SOURCES.md)。
+
+## Windows 本地训练
+
+本项目复用 `D:\视觉识别一硝3\.venv` 中已有的 Ultralytics 和 CUDA 环境。由于该虚拟环境移动后原有的 `yolo.exe` 启动器路径已失效，应直接调用其中的 `python.exe` 运行训练脚本。
+
+先运行3轮冒烟测试：
+
+```powershell
+cd "E:\机器人集成小组项目"
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\train_yolo26n_windows.py --smoke
+```
+
+确认冒烟测试没有数据或 CUDA 错误后，开始100轮正式训练：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\train_yolo26n_windows.py
+```
+
+如果8GB显存不足，可把批量大小改为4：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\train_yolo26n_windows.py --batch 4
+```
+
+最佳模型默认保存在 `runs/pencil_tennis_yolo26n/weights/best.pt`。脚本不会在 CUDA 不可用时自动退回 CPU。
