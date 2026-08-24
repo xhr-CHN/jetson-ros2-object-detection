@@ -1,0 +1,75 @@
+{
+  "sources": {
+    "pencil-v2": {
+      "train": {
+        "input": 75,
+        "added": 75,
+        "duplicates_skipped": 0,
+        "objects_added": 77
+      },
+      "val": {
+        "input": 19,
+        "added": 19,
+        "duplicates_skipped": 0,
+        "objects_added": 20
+      },
+      "test": {
+        "input": 0,
+        "added": 0,
+        "duplicates_skipped": 0,
+        "objects_added": 0
+      }
+    },
+    "tennis-ball-v1": {
+      "train": {
+        "input": 246,
+        "added": 246,
+        "duplicates_skipped": 0,
+        "objects_added": 283
+      },
+      "val": {
+        "input": 70,
+        "added": 70,
+        "duplicates_skipped": 0,
+        "objects_added": 72
+      },
+      "test": {
+        "input": 36,
+        "added": 36,
+        "duplicates_skipped": 0,
+        "objects_added": 47
+      }
+    }
+  },
+  "duplicate_policy": "SHA-256 of file bytes or decoded RGB pixels",
+  "class_mapping": {
+    "0": "pencil",
+    "1": "tennis_ball"
+  },
+  "final": {
+    "train": {
+      "images": 605,
+      "labels": 605,
+      "objects": {
+        "pencil": 317,
+        "tennis_ball": 387
+      }
+    },
+    "val": {
+      "images": 171,
+      "labels": 171,
+      "objects": {
+        "pencil": 100,
+        "tennis_ball": 94
+      }
+    },
+    "test": {
+      "images": 119,
+      "labels": 119,
+      "objects": {
+        "pencil": 80,
+        "tennis_ball": 70
+      }
+    }
+  }
+}
