@@ -99,7 +99,7 @@ cd "E:\机器人集成小组项目"
 & "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\evaluate_yolo26n_windows.py
 ```
 
-总体及逐类指标保存到 `results/test/yolo26n/metrics.json`，验证图表保存到 `results/test/yolo26n/validation/`，83张带检测框的预测图片保存到 `results/test/yolo26n/predictions/`。
+总体及逐类指标保存到 `results/test/yolo26n/metrics.json`，验证图表保存到 `results/test/yolo26n/validation/`，119张带检测框的预测图片保存到 `results/test/yolo26n/predictions/`。
 
 ### Windows 摄像头实时检测
 
@@ -129,7 +129,7 @@ USB 摄像头通常使用编号1；如果编号1不可用，可继续尝试2：
 
 YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
 
-独立测试集评估结果见 [`results/test/yolo26n/README.md`](results/test/yolo26n/README.md)。测试集总体 Precision 为0.9922、Recall 为0.9491、mAP@0.5 为0.9887、mAP@0.5:0.95 为0.8934。
+独立测试集评估结果见 [`results/test/yolo26n/README.md`](results/test/yolo26n/README.md)。最终增强模型在119张测试图片上的总体 Precision 为0.9888、Recall 为0.9019、mAP@0.5 为0.9715、mAP@0.5:0.95 为0.8776。
 
 ## ROS 2 检测与验收记录
 
