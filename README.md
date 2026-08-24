@@ -111,6 +111,20 @@ cd "E:\机器人集成小组项目"
 
 按 `Q` 或 `Esc` 退出。可使用 `--camera 1` 切换摄像头，或使用 `--conf 0.4` 调整置信度阈值。该脚本只实时显示，不录像或保存图片。
 
+使用增强训练目录中的当前最佳模型进行摄像头测试：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\webcam_yolo26n_augmented_windows.py
+```
+
+USB 摄像头通常使用编号1；如果编号1不可用，可继续尝试2：
+
+```powershell
+& "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\webcam_yolo26n_augmented_windows.py --camera 1 --conf 0.25
+```
+
+也可以用 `--model` 指定任意待比较权重。增强训练完成并通过独立测试前，该程序读取的是训练目录中的候选 `best.pt`，不会自动替换仓库正式模型。
+
 ## 已训练模型
 
 YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
