@@ -14,10 +14,8 @@ from ultralytics import YOLO
 PROJECT_ROOT = Path(r"E:\机器人集成小组项目")
 DEFAULT_MODEL = (
     PROJECT_ROOT
-    / "runs"
-    / "pencil_tennis_yolo26n_augmented"
-    / "weights"
-    / "best.pt"
+    / "models"
+    / "pencil_tennis_yolo26n_best.pt"
 )
 
 

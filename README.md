@@ -123,7 +123,7 @@ USB 摄像头通常使用编号1；如果编号1不可用，可继续尝试2：
 & "D:\视觉识别一硝3\.venv\Scripts\python.exe" src\webcam_yolo26n_augmented_windows.py --camera 1 --conf 0.25
 ```
 
-也可以用 `--model` 指定任意待比较权重。增强训练完成并通过独立测试前，该程序读取的是训练目录中的候选 `best.pt`，不会自动替换仓库正式模型。
+也可以用 `--model` 指定任意待比较权重。该程序默认读取 `models/pencil_tennis_yolo26n_best.pt`，即完整训练100轮、最佳轮次为第87轮的正式增强模型。
 
 ## 已训练模型
 
