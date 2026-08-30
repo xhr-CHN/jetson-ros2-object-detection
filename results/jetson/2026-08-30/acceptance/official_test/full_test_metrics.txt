@@ -1,0 +1,22 @@
+Evaluation split: test
+Validation split used: NO
+
+                   all        119        150      0.988      0.902      0.966      0.856
+                pencil         60         80          1      0.947      0.994      0.945
+           tennis_ball         59         70      0.976      0.857      0.937      0.766
+Speed: 1.1ms preprocess, 32.4ms inference, 0.0ms loss, 0.4ms postprocess per image
+
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.854
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.966
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.939
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.351
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.930
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.710
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.884
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.884
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.383
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.800
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.947
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.979
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.951

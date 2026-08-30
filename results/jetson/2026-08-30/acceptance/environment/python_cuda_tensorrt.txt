@@ -1,0 +1,8 @@
+Python 3.10.12
+
+PyTorch: 2.10.0
+CUDA available: True
+CUDA build: 12.6
+GPU: Orin
+Ultralytics: 8.4.135
+TensorRT: 10.3.0

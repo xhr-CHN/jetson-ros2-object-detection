@@ -1,0 +1,50 @@
+Ultralytics 8.4.135 🚀 Python-3.10.12 torch-2.10.0 CUDA:0 (Orin, 15658MiB)
+YOLO26n summary (fused): 122 layers, 2,375,226 parameters, 0 gradients, 5.3 GFLOPs
+Matplotlib is building the font cache; this may take a moment.
+[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 2% ──────────── 16.0/755.1KB 25.5KB/s 0.2s<29.0s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 6% ╸─────────── 48.0/755.1KB 104.6KB/s 0.3s<6.8s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 14% ━╸────────── 112.0/755.1KB 242.0KB/s 0.4s<2.7s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 23% ━━╸───────── 176.0/755.1KB 272.7KB/s 0.6s<2.1s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 37% ━━━━──────── 280.0/755.1KB 343.4KB/s 0.8s<1.4s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 51% ━━━━━━────── 392.0/755.1KB 404.1KB/s 1.0s<0.9s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 94% ━━━━━━━━━━━─ 712.0/755.1KB 1.9MB/s 1.2s<0.0s[KDownloading https://ultralytics.com/assets/Arial.ttf to '/root/.config/Ultralytics/Arial.ttf': 100% ━━━━━━━━━━━━ 755.1KB 643.3KB/s 1.2s
+[34m[1mval: [0mFast image access ✅ (ping: 0.6±0.8 ms, read: 238.0±138.7 MB/s, size: 175.1 KB)
+[K[34m[1mval: [0mScanning /root/jetson_acceptance_repo_20260830_205510/dataset/labels/test... 56 images, 0 backgrounds, 0 corrupt: 47% ━━━━━╸────── 56/119 164.4it/s 0.1s<0.4s[K[34m[1mval: [0mScanning /root/jetson_acceptance_repo_20260830_205510/dataset/labels/test... 119 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 119/119 624.7it/s 0.2s
+[34m[1mval: [0mNew cache created: /root/jetson_acceptance_repo_20260830_205510/dataset/labels/test.cache
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 3% ──────────── 1/30 16.7s/it 5.0s<8:05[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 6% ╸─────────── 2/30 1.5s/it 5.5s<41.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 3/30 1.3it/s 5.8s<20.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 13% ━╸────────── 4/30 1.7it/s 6.2s<15.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━━────────── 5/30 1.9it/s 6.6s<13.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 6/30 1.9it/s 7.2s<12.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 23% ━━╸───────── 7/30 2.5it/s 7.5s<9.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 8/30 3.1it/s 7.7s<7.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 9/30 3.6it/s 7.9s<5.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 10/30 4.0it/s 8.1s<5.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 36% ━━━━──────── 11/30 4.2it/s 8.3s<4.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 12/30 4.4it/s 8.5s<4.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 43% ━━━━━─────── 13/30 4.6it/s 8.7s<3.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 46% ━━━━━╸────── 14/30 4.7it/s 8.9s<3.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 15/30 4.7it/s 9.1s<3.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 53% ━━━━━━────── 16/30 4.2it/s 9.5s<3.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 17/30 4.3it/s 9.7s<3.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 18/30 4.3it/s 9.9s<2.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 63% ━━━━━━━╸──── 19/30 4.3it/s 10.1s<2.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━━──── 20/30 4.4it/s 10.4s<2.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 21/30 4.5it/s 10.6s<2.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 22/30 4.5it/s 10.8s<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 76% ━━━━━━━━━─── 23/30 4.5it/s 11.0s<1.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 24/30 4.5it/s 11.2s<1.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 83% ━━━━━━━━━━── 25/30 4.5it/s 11.5s<1.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 86% ━━━━━━━━━━── 26/30 4.5it/s 11.7s<0.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 27/30 4.4it/s 11.9s<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 93% ━━━━━━━━━━━─ 28/30 4.5it/s 12.1s<0.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 29/30 4.4it/s 12.4s<0.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 30/30 2.4it/s 12.7s
+                   all        119        150      0.988      0.902      0.966      0.856
+                pencil         60         80          1      0.947      0.994      0.945
+           tennis_ball         59         70      0.976      0.857      0.937      0.766
+Speed: 1.1ms preprocess, 32.4ms inference, 0.0ms loss, 0.4ms postprocess per image
+Saving /root/jetson_acceptance_20260830_205633/yolo_official/full_test_pt/predictions.json...
+
+Evaluating faster-coco-eval mAP...
+[31m[1mrequirements:[0m Ultralytics requirement ['faster-coco-eval>=1.6.7'] not found, attempting AutoUpdate...
+Collecting faster-coco-eval>=1.6.7
+  Downloading faster_coco_eval-1.8.0-cp310-cp310-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl.metadata (13 kB)
+Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from faster-coco-eval>=1.6.7) (1.26.4)
+Downloading faster_coco_eval-1.8.0-cp310-cp310-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl (567 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 567.5/567.5 kB 1.5 MB/s  0:00:00
+Installing collected packages: faster-coco-eval
+Successfully installed faster-coco-eval-1.8.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[31m[1mrequirements:[0m AutoUpdate success ✅ 21.5s
+WARNING ⚠️ [31m[1mrequirements:[0m [1mRestart runtime or rerun command for updates to take effect[0m
+
+Evaluate annotation type *bbox*
+COCOeval_opt.evaluate() finished...
+DONE (t=0.02s).
+Accumulating evaluation results...
+COCOeval_opt.accumulate() finished...
+DONE (t=0.00s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.854
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.966
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.939
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.351
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.930
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.710
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.884
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.884
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.383
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.800
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.947
+ Average Recall     (AR) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.979
+ Average Recall     (AR) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.951
+Results saved to [1m/root/jetson_acceptance_20260830_205633/yolo_official/full_test_pt[0m
+💡 Learn more at https://docs.ultralytics.com/modes/val

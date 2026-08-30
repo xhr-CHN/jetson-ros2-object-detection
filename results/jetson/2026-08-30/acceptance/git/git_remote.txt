@@ -1,0 +1,2 @@
+origin	https://github.com/xhr-CHN/jetson-ros2-object-detection.git (fetch)
+origin	https://github.com/xhr-CHN/jetson-ros2-object-detection.git (push)

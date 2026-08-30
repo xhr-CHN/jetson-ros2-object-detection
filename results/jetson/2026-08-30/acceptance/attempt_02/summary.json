@@ -1,0 +1,31 @@
+{
+  "evaluation_type": "offline held-out test-set acceptance",
+  "source_split": "test",
+  "val_used": false,
+  "random_seed": 20260830,
+  "model": "/root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.engine",
+  "model_format": "TensorRT Engine",
+  "total_tests": 40,
+  "correct_tests": 39,
+  "error_tests": 1,
+  "accuracy": 0.975,
+  "pencil_tests": 20,
+  "pencil_correct": 19,
+  "pencil_accuracy": 0.95,
+  "tennis_ball_tests": 20,
+  "tennis_ball_correct": 20,
+  "tennis_ball_accuracy": 1.0,
+  "average_offline_model_fps": 31.790617500000003,
+  "minimum_offline_model_fps": 30.1659,
+  "meets_40_tests": true,
+  "meets_accuracy_80_percent": true,
+  "notes": [
+    "40 cases were selected only from dataset/images/test.",
+    "dataset/images/val was not used.",
+    "Each selected image contains exactly one ground-truth object.",
+    "Tests 1-20 are pencil and tests 21-40 are tennis_ball.",
+    "The highest-confidence detection determines the predicted class.",
+    "An empty detection is scored as incorrect.",
+    "offline_model_fps is derived from Ultralytics preprocess + inference + postprocess time and is not the ROS camera end-to-end FPS."
+  ]
+}

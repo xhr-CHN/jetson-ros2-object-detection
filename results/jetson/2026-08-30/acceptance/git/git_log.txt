@@ -1,0 +1,10 @@
+c21880c media: replace Jetson demos with final video
+f6bfaa5 docs: specify final Jetson demo replacement
+38bf9e8 media: add Jetson deployment demos
+26c2f09 docs: record Jetson deployment validation
+ad3b98e model: add ONNX and Jetson TensorRT artifacts
+f9e2327 docs: record repaired Jetson commit
+f1ce99e docs: specify Ubuntu commit history repair
+29b5d91 docs: specify Jetson artifact integration
+2e15f0d perf(ros2): optimize Jetson camera capture with V4L2 MJPG
+2e907f8 docs: clarify final augmented model training

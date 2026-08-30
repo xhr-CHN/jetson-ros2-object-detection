@@ -1,0 +1,9 @@
+===== MODEL FILES =====
+-rw-r--r-- 1 root root 7.5M Aug 30 20:12 /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.engine
+-rw-r--r-- 1 root root 9.4M Aug 30 20:12 /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.onnx
+-rw-r--r-- 1 root root 5.2M Aug 30 20:12 /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.pt
+
+===== SHA256 =====
+da747f4ed471be2a4bef0e858b3de5ce8ff133a1ff5459ceb2b1577093a4063d  /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.pt
+4616c124b10e4b2c65ce9680e14e3fe41b1170f2f4e1cad33fd79c68ce4c2401  /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.onnx
+bbfffc6d678ddf8627b58be11d50a2f67fed4d430dc387680d085712713dc0e3  /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.engine

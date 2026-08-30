@@ -1,0 +1,44 @@
+random_seed=20260830
+selection_rule=20 pencil + 20 tennis_ball, single-GT-object test images only
+source_split=test only
+
+01	global_gt_object_id=4	expected=pencil	pencil_green30.jpg
+02	global_gt_object_id=15	expected=pencil	pencil_green73.jpg
+03	global_gt_object_id=70	expected=pencil	pencil_red4.jpg
+04	global_gt_object_id=7	expected=pencil	pencil_green4.jpg
+05	global_gt_object_id=3	expected=pencil	pencil_green26.jpg
+06	global_gt_object_id=75	expected=pencil	pencil_red71.jpg
+07	global_gt_object_id=19	expected=pencil	pencil_green85.jpg
+08	global_gt_object_id=61	expected=pencil	pencil_red15.jpg
+09	global_gt_object_id=2	expected=pencil	pencil_green11.jpg
+10	global_gt_object_id=77	expected=pencil	pencil_red76.jpg
+11	global_gt_object_id=16	expected=pencil	pencil_green75.jpg
+12	global_gt_object_id=20	expected=pencil	pencil_green89.jpg
+13	global_gt_object_id=18	expected=pencil	pencil_green83.jpg
+14	global_gt_object_id=62	expected=pencil	pencil_red17.jpg
+15	global_gt_object_id=17	expected=pencil	pencil_green77.jpg
+16	global_gt_object_id=11	expected=pencil	pencil_green61.jpg
+17	global_gt_object_id=66	expected=pencil	pencil_red28.jpg
+18	global_gt_object_id=64	expected=pencil	pencil_red21.jpg
+19	global_gt_object_id=67	expected=pencil	pencil_red31.jpg
+20	global_gt_object_id=74	expected=pencil	pencil_red70.jpg
+21	global_gt_object_id=92	expected=tennis_ball	roboflow_tennis_222_jpg.rf.a1668a8f99681895df66c4eea7b9031d.jpg
+22	global_gt_object_id=131	expected=tennis_ball	tennis_00000023.png
+23	global_gt_object_id=100	expected=tennis_ball	roboflow_tennis_53_jpg.rf.ab4845fd64197361b8822526def7c4ec.jpg
+24	global_gt_object_id=90	expected=tennis_ball	roboflow_tennis_205_jpg.rf.97bdce92e6b7a4562c99aaf20ffcbff9.jpg
+25	global_gt_object_id=139	expected=tennis_ball	tennis_00000058.png
+26	global_gt_object_id=145	expected=tennis_ball	tennis_00000108.png
+27	global_gt_object_id=91	expected=tennis_ball	roboflow_tennis_217_jpg.rf.0b48f4201cd651c5ad840483f2b4a266.jpg
+28	global_gt_object_id=147	expected=tennis_ball	tennis_00000115.png
+29	global_gt_object_id=146	expected=tennis_ball	tennis_00000109.png
+30	global_gt_object_id=137	expected=tennis_ball	tennis_00000056.png
+31	global_gt_object_id=99	expected=tennis_ball	roboflow_tennis_39_jpg.rf.392becbf66106d0bc144f6d7cc0bb468.jpg
+32	global_gt_object_id=96	expected=tennis_ball	roboflow_tennis_29_jpg.rf.338948bb3563a94080eed0c1b8af4656.jpg
+33	global_gt_object_id=138	expected=tennis_ball	tennis_00000057.png
+34	global_gt_object_id=101	expected=tennis_ball	roboflow_tennis_60_jpg.rf.af29dac33f9b8839fbafb5b0dc5992c7.jpg
+35	global_gt_object_id=89	expected=tennis_ball	roboflow_tennis_198_jpg.rf.f1906e96731e8d75c834beb24db784a9.jpg
+36	global_gt_object_id=95	expected=tennis_ball	roboflow_tennis_24_jpg.rf.e94a3f9367cafa4ebef3dca209cef52e.jpg
+37	global_gt_object_id=148	expected=tennis_ball	tennis_00000131.png
+38	global_gt_object_id=103	expected=tennis_ball	roboflow_tennis_86_jpg.rf.81ad06787afc62c0a34ac99726b4e9bb.jpg
+39	global_gt_object_id=85	expected=tennis_ball	roboflow_tennis_12_jpg.rf.3cb1aa25b2a7ff1c36c276c3a3fc6e1f.jpg
+40	global_gt_object_id=84	expected=tennis_ball	roboflow_tennis_11_jpg.rf.b6c47c8a078758c86cc2a809abf7fe56.jpg

@@ -35,7 +35,7 @@ docs/       运行说明、截图和演示材料
 - [x] 训练与评估模型
 - [x] 部署到 Jetson
 - [x] 编写 ROS 2 结果发布与验收记录程序
-- [ ] 完成 20 个物体的验收测试
+- [x] 完成不少于 20 个物体的验收测试
 - [ ] 完成 LaTeX 实验报告
 
 ## 数据来源
@@ -171,7 +171,9 @@ ros2 launch pencil_tennis_detector detector.launch.py \
 - 原始部署证据：[`results/jetson/2026-08-30/deployment_evidence.txt`](results/jetson/2026-08-30/deployment_evidence.txt)
 - 最终演示视频：[`jetson_demo.mp4`](results/jetson/2026-08-30/jetson_demo.mp4)
 
-上述记录证明板端部署、ROS 2 发布和速度指标已经完成，但只包含一个明确的检测结果样例，不能替代不少于20个物体、正确率不低于80%的独立人工验收。因此“完成20个物体的验收测试”仍保持未勾选。
+除摄像头部署记录外，2026年8月30日还在Jetson上使用正式TensorRT Engine完成了两次留出测试集离线验收。第一次为铅笔10张、网球10张的初步测试；第二次才是最终验收，包含铅笔20张、网球20张，共40张互不重复的测试图片。最终正确39张，总正确率97.5%；铅笔正确率95%，网球正确率100%。第二次测试最低离线模型速度为30.1659 FPS。
+
+最终验收的CSV、JSON、全部正确/错误案例、运行日志、环境记录及完整性校验见 [`results/jetson/2026-08-30/acceptance/README.md`](results/jetson/2026-08-30/acceptance/README.md)。该验收使用未参与训练和最佳权重选择的静态测试图片，不能与摄像头端到端FPS或完整测试集mAP混为同一指标。
 
 可在另一个已经 source 工作空间的终端检查：
 
@@ -181,7 +183,7 @@ ros2 topic echo /detection/fps
 ros2 run rqt_image_view rqt_image_view /detection/image
 ```
 
-进行20个物体的人工验收记录时，在另一个终端运行：
+如果课程现场还要求逐个摆放实物进行摄像头人工验收，可在另一个终端运行：
 
 ```bash
 source /opt/ros/humble/setup.bash

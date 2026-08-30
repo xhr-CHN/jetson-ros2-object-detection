@@ -1,0 +1,11 @@
+===== VIDEO DEVICES =====
+ls: cannot access '/dev/video*': No such file or directory
+
+===== V4L2 DEVICES =====
+Cannot open device /dev/video0, exiting.
+NVIDIA Tegra Video Input Device (platform:tegra-camrtc-ca):
+	/dev/media0
+
+
+===== VIDEO0 FORMATS =====
+Cannot open device /dev/video0, exiting.

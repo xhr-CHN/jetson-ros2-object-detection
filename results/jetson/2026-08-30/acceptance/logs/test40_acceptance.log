@@ -1,0 +1,85 @@
+Total GT objects in test: 150
+Test images with labels: 119
+Single-object pencil candidates: 40
+Single-object tennis_ball candidates: 54
+Loading TensorRT model: /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.engine
+Running warm-up inference...
+Loading /root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.engine for TensorRT inference...
+[08/30/2026-21:13:03] [TRT] [I] Loaded engine size: 7 MiB
+[08/30/2026-21:13:03] [TRT] [W] Using an engine plan file across different models of devices is not recommended and is likely to affect performance or even cause errors.
+[08/30/2026-21:13:03] [TRT] [I] [MemUsageChange] TensorRT-managed allocation in IExecutionContext creation: CPU +0, GPU +9, now: CPU 0, GPU 13 (MiB)
+[01/40] GT#4 pencil_green30.jpg expected=pencil predicted=pencil conf=0.9678 FPS=30.59 CORRECT
+[02/40] GT#15 pencil_green73.jpg expected=pencil predicted=pencil conf=0.9727 FPS=32.02 CORRECT
+[03/40] GT#70 pencil_red4.jpg expected=pencil predicted=none conf=0.0000 FPS=31.16 ERROR
+[04/40] GT#7 pencil_green4.jpg expected=pencil predicted=pencil conf=0.9707 FPS=30.17 CORRECT
+[05/40] GT#3 pencil_green26.jpg expected=pencil predicted=pencil conf=0.9653 FPS=30.65 CORRECT
+[06/40] GT#75 pencil_red71.jpg expected=pencil predicted=pencil conf=0.9419 FPS=30.60 CORRECT
+[07/40] GT#19 pencil_green85.jpg expected=pencil predicted=pencil conf=0.9570 FPS=30.90 CORRECT
+[08/40] GT#61 pencil_red15.jpg expected=pencil predicted=pencil conf=0.8735 FPS=30.71 CORRECT
+[09/40] GT#2 pencil_green11.jpg expected=pencil predicted=pencil conf=0.9658 FPS=30.37 CORRECT
+[10/40] GT#77 pencil_red76.jpg expected=pencil predicted=pencil conf=0.9634 FPS=30.51 CORRECT
+[11/40] GT#16 pencil_green75.jpg expected=pencil predicted=pencil conf=0.9658 FPS=30.49 CORRECT
+[12/40] GT#20 pencil_green89.jpg expected=pencil predicted=pencil conf=0.5737 FPS=30.83 CORRECT
+[13/40] GT#18 pencil_green83.jpg expected=pencil predicted=pencil conf=0.9668 FPS=30.62 CORRECT
+[14/40] GT#62 pencil_red17.jpg expected=pencil predicted=pencil conf=0.9839 FPS=30.84 CORRECT
+[15/40] GT#17 pencil_green77.jpg expected=pencil predicted=pencil conf=0.9731 FPS=30.78 CORRECT
+[16/40] GT#11 pencil_green61.jpg expected=pencil predicted=pencil conf=0.9634 FPS=30.70 CORRECT
+[17/40] GT#66 pencil_red28.jpg expected=pencil predicted=pencil conf=0.9653 FPS=30.49 CORRECT
+[18/40] GT#64 pencil_red21.jpg expected=pencil predicted=pencil conf=0.9561 FPS=31.05 CORRECT
+[19/40] GT#67 pencil_red31.jpg expected=pencil predicted=pencil conf=0.9482 FPS=30.90 CORRECT
+[20/40] GT#74 pencil_red70.jpg expected=pencil predicted=pencil conf=0.9741 FPS=30.56 CORRECT
+[21/40] GT#92 roboflow_tennis_222_jpg.rf.a1668a8f99681895df66c4eea7b9031d.jpg expected=tennis_ball predicted=tennis_ball conf=0.9536 FPS=32.80 CORRECT
+[22/40] GT#131 tennis_00000023.png expected=tennis_ball predicted=tennis_ball conf=0.9697 FPS=33.03 CORRECT
+[23/40] GT#100 roboflow_tennis_53_jpg.rf.ab4845fd64197361b8822526def7c4ec.jpg expected=tennis_ball predicted=tennis_ball conf=0.9233 FPS=33.08 CORRECT
+[24/40] GT#90 roboflow_tennis_205_jpg.rf.97bdce92e6b7a4562c99aaf20ffcbff9.jpg expected=tennis_ball predicted=tennis_ball conf=0.9224 FPS=32.40 CORRECT
+[25/40] GT#139 tennis_00000058.png expected=tennis_ball predicted=tennis_ball conf=0.9517 FPS=32.94 CORRECT
+[26/40] GT#145 tennis_00000108.png expected=tennis_ball predicted=tennis_ball conf=0.9463 FPS=36.97 CORRECT
+[27/40] GT#91 roboflow_tennis_217_jpg.rf.0b48f4201cd651c5ad840483f2b4a266.jpg expected=tennis_ball predicted=tennis_ball conf=0.8296 FPS=32.07 CORRECT
+[28/40] GT#147 tennis_00000115.png expected=tennis_ball predicted=tennis_ball conf=0.6079 FPS=32.19 CORRECT
+[29/40] GT#146 tennis_00000109.png expected=tennis_ball predicted=tennis_ball conf=0.9634 FPS=37.51 CORRECT
+[30/40] GT#137 tennis_00000056.png expected=tennis_ball predicted=tennis_ball conf=0.8750 FPS=33.34 CORRECT
+[31/40] GT#99 roboflow_tennis_39_jpg.rf.392becbf66106d0bc144f6d7cc0bb468.jpg expected=tennis_ball predicted=tennis_ball conf=0.6748 FPS=33.28 CORRECT
+[32/40] GT#96 roboflow_tennis_29_jpg.rf.338948bb3563a94080eed0c1b8af4656.jpg expected=tennis_ball predicted=tennis_ball conf=0.9473 FPS=32.33 CORRECT
+[33/40] GT#138 tennis_00000057.png expected=tennis_ball predicted=tennis_ball conf=0.9741 FPS=31.20 CORRECT
+[34/40] GT#101 roboflow_tennis_60_jpg.rf.af29dac33f9b8839fbafb5b0dc5992c7.jpg expected=tennis_ball predicted=tennis_ball conf=0.9326 FPS=34.14 CORRECT
+[35/40] GT#89 roboflow_tennis_198_jpg.rf.f1906e96731e8d75c834beb24db784a9.jpg expected=tennis_ball predicted=tennis_ball conf=0.9561 FPS=32.49 CORRECT
+[36/40] GT#95 roboflow_tennis_24_jpg.rf.e94a3f9367cafa4ebef3dca209cef52e.jpg expected=tennis_ball predicted=tennis_ball conf=0.8760 FPS=31.02 CORRECT
+[37/40] GT#148 tennis_00000131.png expected=tennis_ball predicted=tennis_ball conf=0.9688 FPS=32.52 CORRECT
+[38/40] GT#103 roboflow_tennis_86_jpg.rf.81ad06787afc62c0a34ac99726b4e9bb.jpg expected=tennis_ball predicted=tennis_ball conf=0.7769 FPS=32.20 CORRECT
+[39/40] GT#85 roboflow_tennis_12_jpg.rf.3cb1aa25b2a7ff1c36c276c3a3fc6e1f.jpg expected=tennis_ball predicted=tennis_ball conf=0.3647 FPS=30.73 CORRECT
+[40/40] GT#84 roboflow_tennis_11_jpg.rf.b6c47c8a078758c86cc2a809abf7fe56.jpg expected=tennis_ball predicted=tennis_ball conf=0.9697 FPS=30.46 CORRECT
+
+========== SUMMARY ==========
+{
+  "evaluation_type": "offline held-out test-set acceptance",
+  "source_split": "test",
+  "val_used": false,
+  "random_seed": 20260830,
+  "model": "/root/jetson_acceptance_repo_20260830_205510/models/pencil_tennis_yolo26n_best.engine",
+  "model_format": "TensorRT Engine",
+  "total_tests": 40,
+  "correct_tests": 39,
+  "error_tests": 1,
+  "accuracy": 0.975,
+  "pencil_tests": 20,
+  "pencil_correct": 19,
+  "pencil_accuracy": 0.95,
+  "tennis_ball_tests": 20,
+  "tennis_ball_correct": 20,
+  "tennis_ball_accuracy": 1.0,
+  "average_offline_model_fps": 31.790617500000003,
+  "minimum_offline_model_fps": 30.1659,
+  "meets_40_tests": true,
+  "meets_accuracy_80_percent": true,
+  "notes": [
+    "40 cases were selected only from dataset/images/test.",
+    "dataset/images/val was not used.",
+    "Each selected image contains exactly one ground-truth object.",
+    "Tests 1-20 are pencil and tests 21-40 are tennis_ball.",
+    "The highest-confidence detection determines the predicted class.",
+    "An empty detection is scored as incorrect.",
+    "offline_model_fps is derived from Ultralytics preprocess + inference + postprocess time and is not the ROS camera end-to-end FPS."
+  ]
+}
+
+Saved to: /root/jetson_acceptance_20260830_205633/acceptance/attempt_02

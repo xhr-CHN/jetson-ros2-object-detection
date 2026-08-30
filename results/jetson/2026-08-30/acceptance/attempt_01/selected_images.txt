@@ -1,0 +1,24 @@
+random_seed=20260830
+selection_rule=10 pencil + 10 tennis_ball, single-GT-object test images only
+source_split=test only
+
+01	global_gt_object_id=4	expected=pencil	pencil_green30.jpg
+02	global_gt_object_id=15	expected=pencil	pencil_green73.jpg
+03	global_gt_object_id=70	expected=pencil	pencil_red4.jpg
+04	global_gt_object_id=7	expected=pencil	pencil_green4.jpg
+05	global_gt_object_id=3	expected=pencil	pencil_green26.jpg
+06	global_gt_object_id=75	expected=pencil	pencil_red71.jpg
+07	global_gt_object_id=19	expected=pencil	pencil_green85.jpg
+08	global_gt_object_id=61	expected=pencil	pencil_red15.jpg
+09	global_gt_object_id=2	expected=pencil	pencil_green11.jpg
+10	global_gt_object_id=77	expected=pencil	pencil_red76.jpg
+11	global_gt_object_id=128	expected=tennis_ball	tennis_00000007.png
+12	global_gt_object_id=136	expected=tennis_ball	tennis_00000051.png
+13	global_gt_object_id=132	expected=tennis_ball	tennis_00000024.png
+14	global_gt_object_id=139	expected=tennis_ball	tennis_00000058.png
+15	global_gt_object_id=130	expected=tennis_ball	tennis_00000009.png
+16	global_gt_object_id=101	expected=tennis_ball	roboflow_tennis_60_jpg.rf.af29dac33f9b8839fbafb5b0dc5992c7.jpg
+17	global_gt_object_id=129	expected=tennis_ball	tennis_00000008.png
+18	global_gt_object_id=146	expected=tennis_ball	tennis_00000109.png
+19	global_gt_object_id=140	expected=tennis_ball	tennis_00000060.png
+20	global_gt_object_id=134	expected=tennis_ball	tennis_00000029.png

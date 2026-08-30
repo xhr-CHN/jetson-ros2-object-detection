@@ -1,0 +1,20 @@
+Date:
+Sun Aug 30 21:24:31 UTC 2026
+
+Timezone:
+UTC +0000
+
+uname:
+Linux localhost.localdomain 5.15.148-tegra #1 SMP PREEMPT Wed Aug 26 00:18:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+
+L4T:
+# R36 (release), REVISION: 4.3, GCID: 38968081, BOARD: generic, EABI: aarch64, DATE: Wed Jan  8 01:49:37 UTC 2025
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+
+Architecture:
+aarch64
+
+Jetson model:
+NVIDIA Jetson Orin NX Engineering Reference Developer Kit
