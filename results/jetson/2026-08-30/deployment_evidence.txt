@@ -1,0 +1,160 @@
+===== Jetson Deployment Evidence =====
+Time: Sun Aug 30 06:44:22 UTC 2026
+Repository: /root/jetson-ros2-object-detection
+
+===== System =====
+Linux localhost.localdomain 5.15.148-tegra #1 SMP PREEMPT Wed Aug 26 00:18:29 CST 2026 aarch64 aarch64 aarch64 GNU/Linux
+# R36 (release), REVISION: 4.3, GCID: 38968081, BOARD: generic, EABI: aarch64, DATE: Wed Jan  8 01:49:37 UTC 2025
+# KERNEL_VARIANT: oot
+TARGET_USERSPACE_LIB_DIR=nvidia
+TARGET_USERSPACE_LIB_DIR_PATH=usr/lib/aarch64-linux-gnu/nvidia
+
+===== Machine =====
+aarch64
+
+===== GPU / CUDA =====
+torch: 2.10.0
+cuda_available: True
+gpu: Orin
+cuda_build: 12.6
+
+===== TensorRT =====
+TensorRT: 10.3.0
+
+===== Model Files =====
+-rw-r--r-- 1 root root 7.5M Aug 30 04:53 models/pencil_tennis_yolo26n_best.engine
+-rw-r--r-- 1 root root 9.4M Aug 30 04:45 models/pencil_tennis_yolo26n_best.onnx
+-rw-r--r-- 1 root root 5.2M Aug 30 04:44 models/pencil_tennis_yolo26n_best.pt
+
+===== Model SHA256 =====
+da747f4ed471be2a4bef0e858b3de5ce8ff133a1ff5459ceb2b1577093a4063d  models/pencil_tennis_yolo26n_best.pt
+4616c124b10e4b2c65ce9680e14e3fe41b1170f2f4e1cad33fd79c68ce4c2401  models/pencil_tennis_yolo26n_best.onnx
+bbfffc6d678ddf8627b58be11d50a2f67fed4d430dc387680d085712713dc0e3  models/pencil_tennis_yolo26n_best.engine
+
+===== ROS2 Node =====
+/pencil_tennis_detector
+
+===== ROS2 Topics =====
+/detection/fps
+/detection/image
+/detection/results
+/parameter_events
+/rosout
+
+===== Detection Image Rate =====
+average rate: 14.092
+	min: 0.064s max: 0.133s std dev: 0.01660s window: 15
+average rate: 14.073
+	min: 0.062s max: 0.137s std dev: 0.01722s window: 30
+average rate: 13.751
+	min: 0.062s max: 0.137s std dev: 0.01919s window: 44
+average rate: 13.369
+	min: 0.062s max: 0.137s std dev: 0.02178s window: 57
+average rate: 13.691
+	min: 0.062s max: 0.137s std dev: 0.01955s window: 73
+
+===== Detection FPS =====
+data: 17.971410751342773
+---
+data: 15.421117782592773
+---
+data: 16.585023880004883
+---
+data: 17.086166381835938
+---
+data: 16.491609573364258
+---
+data: 16.24738121032715
+---
+data: 17.617921829223633
+---
+data: 16.252805709838867
+---
+data: 16.194730758666992
+---
+data: 17.09977912902832
+---
+data: 16.454538345336914
+---
+data: 16.181991577148438
+---
+data: 17.391817092895508
+---
+data: 16.27295684814453
+---
+data: 16.27349853515625
+---
+data: 17.36174774169922
+---
+data: 16.313817977905273
+---
+data: 16.263513565063477
+---
+data: 17.354747772216797
+---
+data: 16.47138214111328
+---
+data: 16.03485870361328
+---
+data: 17.591699600219727
+---
+data: 16.255163192749023
+---
+data: 16.044458389282227
+---
+data: 17.24518585205078
+---
+data: 16.57634162902832
+---
+data: 16.137794494628906
+---
+data: 17.846954345703125
+---
+data: 15.902312278747559
+---
+data: 16.552854537963867
+---
+data: 17.247194290161133
+---
+data: 16.289352416992188
+---
+data: 16.04071044921875
+---
+data: 17.30356788635254
+---
+data: 16.644962310791016
+---
+data: 16.15404510498047
+---
+data: 17.561458587646484
+---
+data: 16.203126907348633
+---
+data: 16.240827560424805
+---
+data: 17.600021362304688
+---
+data: 16.215242385864258
+---
+data: 16.224470138549805
+---
+data: 17.23672866821289
+---
+data: 16.028913497924805
+---
+data: 16.54158592224121
+---
+data: 17.186580657958984
+---
+
+===== Detection Result =====
+data: '{"timestamp": 1788072288.5415819, "frame_id": 6710, "image_width": 640, "image_height": 480, "detections": [{"class_id": 1, "class_name": "tennis_ball", "confidence": 0.958984375, "bbox": {"x1": 145.625, "y1": 168.0, "x2": 313.5, "y2": 332.0}}]}'
+---
+
+===== Git =====
+Commit SHA: f95c2e973a758bc209e839b1145d0044de07f591
+Latest commit:
+f95c2e9 Optimize Jetson camera capture with V4L2 MJPG
+Branch: main
+
+===== End =====

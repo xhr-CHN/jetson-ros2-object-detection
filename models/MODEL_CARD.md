@@ -8,7 +8,9 @@
 - 输入尺寸：640 × 640
 - 预训练：是
 - 最佳轮次：第87轮
-- 权重：[`pencil_tennis_yolo26n_best.pt`](pencil_tennis_yolo26n_best.pt)
+- PyTorch权重：[`pencil_tennis_yolo26n_best.pt`](pencil_tennis_yolo26n_best.pt)
+- ONNX模型：[`pencil_tennis_yolo26n_best.onnx`](pencil_tennis_yolo26n_best.onnx)
+- TensorRT Engine：[`pencil_tennis_yolo26n_best.engine`](pencil_tennis_yolo26n_best.engine)
 
 ## 训练配置
 
@@ -32,15 +34,29 @@
 | mAP@0.5 | 0.98185 |
 | mAP@0.5:0.95 | 0.88025 |
 
-这些指标来自验证集，不等同于课程要求的独立20个物体验收结果。模型仍需在测试集、实际摄像头场景和 Jetson 上分别验证准确率与速度。
+这些指标来自验证集，不等同于课程要求的独立20个物体验收结果。独立测试集评估和 Jetson 摄像头部署已经完成，但仍需完成20个实物的人工验收记录。
 
 ## 文件校验
 
-```text
-SHA256  DA747F4ED471BE2A4BEF0E858B3DE5CE8FF133A1FF5459CEB2B1577093A4063D
-File    pencil_tennis_yolo26n_best.pt
-Size    5,415,023 bytes
-```
+| 文件 | 大小 | SHA256 |
+|---|---:|---|
+| `pencil_tennis_yolo26n_best.pt` | 5,415,023 bytes | `DA747F4ED471BE2A4BEF0E858B3DE5CE8FF133A1FF5459CEB2B1577093A4063D` |
+| `pencil_tennis_yolo26n_best.onnx` | 9,761,287 bytes | `4616C124B10E4B2C65CE9680E14E3FE41B1170F2F4E1CAD33FD79C68CE4C2401` |
+| `pencil_tennis_yolo26n_best.engine` | 7,863,922 bytes | `BBFFFC6D678DDF8627B58BE11D50A2F67FED4D430DC387680D085712713DC0E3` |
+
+## Jetson 部署验证
+
+- 设备：Jetson Orin（aarch64）
+- Jetson Linux：R36.4.3
+- PyTorch：2.10.0
+- CUDA：12.6，可用
+- TensorRT：10.3.0
+- ROS 2节点：`/pencil_tennis_detector`
+- 发布话题：`/detection/image`、`/detection/results`、`/detection/fps`
+- 图像话题速率：13.369–14.092 FPS，平均13.795 FPS
+- 检测 FPS样本：15.421–17.971 FPS，平均16.657 FPS
+
+原始记录和演示视频见 [`results/jetson/2026-08-30/`](../results/jetson/2026-08-30/)。TensorRT Engine 是本次 Jetson 环境生成的部署产物，不保证能在不同 JetPack、TensorRT、CUDA、GPU架构或推理配置中直接复用。
 
 ## 已知限制
 
@@ -48,4 +64,4 @@ Size    5,415,023 bytes
 - 两类源数据的背景风格不同。
 - 训练数据缺少铅笔和网球同时出现的场景。
 - Kaggle 铅笔数据集的公开元数据未声明明确许可证；公开再分发前需确认许可。
-- 尚未完成 Jetson TensorRT 推理速度测试。
+- 尚未完成不少于20个实物、正确率不低于80%的独立人工验收。

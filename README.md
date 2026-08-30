@@ -33,7 +33,7 @@ docs/       运行说明、截图和演示材料
 - [x] 获取公开数据集
 - [x] 转换标注并划分数据集
 - [x] 训练与评估模型
-- [ ] 部署到 Jetson
+- [x] 部署到 Jetson
 - [x] 编写 ROS 2 结果发布与验收记录程序
 - [ ] 完成 20 个物体的验收测试
 - [ ] 完成 LaTeX 实验报告
@@ -125,9 +125,11 @@ USB 摄像头通常使用编号1；如果编号1不可用，可继续尝试2：
 
 也可以用 `--model` 指定任意待比较权重。该程序默认读取 `models/pencil_tennis_yolo26n_best.pt`，即完整训练100轮、最佳轮次为第87轮的正式增强模型。
 
-## 已训练模型
+## 已训练与部署模型
 
-YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n/`](results/training/yolo26n/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
+YOLO26n 正式训练已完成，筛选后的最佳权重保存在 [`models/pencil_tennis_yolo26n_best.pt`](models/pencil_tennis_yolo26n_best.pt)。用于跨框架部署的 ONNX 模型和在本次 Jetson 环境中生成的 TensorRT Engine 分别为 [`models/pencil_tennis_yolo26n_best.onnx`](models/pencil_tennis_yolo26n_best.onnx) 与 [`models/pencil_tennis_yolo26n_best.engine`](models/pencil_tennis_yolo26n_best.engine)。TensorRT Engine 与 JetPack、TensorRT、CUDA、GPU架构及推理设置相关，环境变化时应由 PT 或 ONNX 重新生成。
+
+训练曲线、混淆矩阵和完整模型说明见 [`results/training/yolo26n_augmented/`](results/training/yolo26n_augmented/) 与 [`models/MODEL_CARD.md`](models/MODEL_CARD.md)。
 
 独立测试集评估结果见 [`results/test/yolo26n/README.md`](results/test/yolo26n/README.md)。最终增强模型在119张测试图片上的总体 Precision 为0.9888、Recall 为0.9019、mAP@0.5 为0.9715、mAP@0.5:0.95 为0.8776。
 
@@ -158,6 +160,18 @@ ros2 launch pencil_tennis_detector detector.launch.py \
 - `/detection/image`：`sensor_msgs/Image`，包含检测框、类别、置信度和 FPS。
 - `/detection/results`：`std_msgs/String`，包含每帧检测结果 JSON。
 - `/detection/fps`：`std_msgs/Float32`，包含端到端实时速度。
+
+## Jetson 部署结果
+
+2026年8月30日已在 Jetson Orin 上完成部署验证。板端系统为 Jetson Linux R36.4.3（aarch64），CUDA 12.6 可用，TensorRT 版本为10.3.0。ROS 2 节点 `/pencil_tennis_detector` 正常发布检测图像、结构化结果和实时 FPS。
+
+部署记录中的5次图像话题测速为13.369–14.092 FPS，平均13.795 FPS；46个检测 FPS 样本为15.421–17.971 FPS，平均16.657 FPS，超过课程要求的5 FPS。记录中的一个样例以0.958984375置信度识别出 `tennis_ball`。
+
+- 完整结果说明：[`results/jetson/2026-08-30/README.md`](results/jetson/2026-08-30/README.md)
+- 原始部署证据：[`results/jetson/2026-08-30/deployment_evidence.txt`](results/jetson/2026-08-30/deployment_evidence.txt)
+- 演示视频：[`jetson_demo_01.mp4`](results/jetson/2026-08-30/jetson_demo_01.mp4)、[`jetson_demo_02.mp4`](results/jetson/2026-08-30/jetson_demo_02.mp4)
+
+上述记录证明板端部署、ROS 2 发布和速度指标已经完成，但只包含一个明确的检测结果样例，不能替代不少于20个物体、正确率不低于80%的独立人工验收。因此“完成20个物体的验收测试”仍保持未勾选。
 
 可在另一个已经 source 工作空间的终端检查：
 
