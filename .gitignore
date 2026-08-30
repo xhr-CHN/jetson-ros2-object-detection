@@ -37,3 +37,6 @@ Thumbs.db
 
 # Local brainstorming visual companion sessions
 .superpowers/
+report/fonts/
+report/build/
+tmp/

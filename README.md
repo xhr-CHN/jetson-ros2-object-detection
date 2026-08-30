@@ -36,7 +36,7 @@ docs/       运行说明、截图和演示材料
 - [x] 部署到 Jetson
 - [x] 编写 ROS 2 结果发布与验收记录程序
 - [x] 完成不少于 20 个物体的验收测试
-- [ ] 完成 LaTeX 实验报告
+- [x] 完成 LaTeX 实验报告
 
 ## 数据来源
 
@@ -174,6 +174,10 @@ ros2 launch pencil_tennis_detector detector.launch.py \
 除摄像头部署记录外，2026年8月30日还在Jetson上使用正式TensorRT Engine完成了两次留出测试集离线验收。第一次为铅笔10张、网球10张的初步测试；第二次才是最终验收，包含铅笔20张、网球20张，共40张互不重复的测试图片。最终正确39张，总正确率97.5%；铅笔正确率95%，网球正确率100%。第二次测试最低离线模型速度为30.1659 FPS。
 
 最终验收的CSV、JSON、全部正确/错误案例、运行日志、环境记录及完整性校验见 [`results/jetson/2026-08-30/acceptance/README.md`](results/jetson/2026-08-30/acceptance/README.md)。该验收使用未参与训练和最佳权重选择的静态测试图片，不能与摄像头端到端FPS或完整测试集mAP混为同一指标。
+
+## 实验报告
+
+最终LaTeX实验报告位于 [`report/experiment1_object_detection_report.pdf`](report/experiment1_object_detection_report.pdf)，源码位于 [`report/main.tex`](report/main.tex)。报告采用A4单栏排版，正文小四号宋体，英文和数字使用Times New Roman；表格、曲线、流程图和GitHub截图保持黑白，真实检测照片及Jetson画面保留原始彩色与原始宽高比。报告包含训练曲线、独立测试PR曲线与混淆矩阵、Jetson实时画面、40项验收、唯一错误案例以及真实GitHub提交截图。
 
 可在另一个已经 source 工作空间的终端检查：
 
