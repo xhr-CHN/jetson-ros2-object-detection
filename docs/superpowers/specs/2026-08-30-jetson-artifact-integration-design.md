@@ -24,10 +24,11 @@ executed automatically.
   `.git`, the normalized dataset, validation outputs, source code, and deployment
   models.
 - No credential-, token-, private-key-, or environment-file names were found.
-- The archive contains Jetson commit
-  `f95c2e973a758bc209e839b1145d0044de07f591`, which is one commit ahead of the
-  current local `main`. It changes only the ROS2 detector camera setup to use V4L2,
-  MJPG, 640 x 480, 30 FPS, and a one-frame buffer.
+- The archive originally contained Jetson commit
+  `f95c2e973a758bc209e839b1145d0044de07f591`. Its code-equivalent replacement is
+  `2e15f0dc1079ec8bc9fb6b1d9deca74e2ea4f1e3`, with corrected GitHub attribution and
+  commit-message format. It changes only the ROS2 detector camera setup to use
+  V4L2, MJPG, 640 x 480, 30 FPS, and a one-frame buffer.
 - The archived model hashes match the deployment evidence:
 
   | File | Size | SHA256 |
@@ -60,8 +61,8 @@ not be silently deleted.
 
 ## Git policy
 
-- Preserve the Jetson camera change by importing and fast-forwarding to commit
-  `f95c2e9` rather than recreating the edit.
+- Preserve the Jetson camera change through repaired commit `2e15f0d`, whose tree is
+  identical to the original Ubuntu commit.
 - Commit the verified ONNX and TensorRT Engine files as requested. Their individual
   sizes are below GitHub's 100 MiB single-file limit.
 - Update `.gitignore` so the two named deployment artifacts under `models/` are
@@ -116,7 +117,8 @@ objects.
 
 ## Validation and success criteria
 
-1. Local `main` contains Jetson commit `f95c2e9` with no unrelated source changes.
+1. Local `main` contains repaired Jetson commit `2e15f0d` with no unrelated source
+   changes.
 2. The three model files in `models/` match the recorded SHA256 values.
 3. The full backup is present under `backups/` and is ignored by Git.
 4. Both MP4 outputs pass stream and duration checks; the original WebM files remain

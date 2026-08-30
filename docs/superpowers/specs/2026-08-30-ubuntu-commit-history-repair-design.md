@@ -103,3 +103,9 @@ git config --global user.email "202787152+xhr-CHN@users.noreply.github.com"
 Because GitHub history is rewritten, an existing Ubuntu clone must fetch the new
 history and explicitly reconcile its local `main`, or be cloned again. This follow-up
 is not performed automatically from the Windows workspace.
+
+## Repair result
+
+The code-equivalent repaired commit created from the original tree is
+`2e15f0dc1079ec8bc9fb6b1d9deca74e2ea4f1e3`. The recovery branch retains the
+original `f95c2e973a758bc209e839b1145d0044de07f591` commit.
