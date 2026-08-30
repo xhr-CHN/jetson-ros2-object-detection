@@ -34,3 +34,6 @@ ros2_ws/log/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local brainstorming visual companion sessions
+.superpowers/
