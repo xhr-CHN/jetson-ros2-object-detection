@@ -32,7 +32,16 @@ class DetectorNode(Node):
 
         self.get_logger().info(f"Loading model: {model_path}")
         self.model = YOLO(model_path)
-        self.camera = cv2.VideoCapture(camera_index)
+        self.camera = cv2.VideoCapture(camera_index, cv2.CAP_V4L2)
+
+        self.camera.set(
+            cv2.CAP_PROP_FOURCC,
+            cv2.VideoWriter_fourcc(*"MJPG")
+        )
+        self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+        self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+        self.camera.set(cv2.CAP_PROP_FPS, 30)
+        self.camera.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         if not self.camera.isOpened():
             self.camera.release()
             raise RuntimeError(f"unable to open camera index {camera_index}")
