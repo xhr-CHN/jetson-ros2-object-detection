@@ -20,6 +20,11 @@ tennis/
 *.onnx
 *.pt
 !models/pencil_tennis_yolo26n_best.pt
+!models/pencil_tennis_yolo26n_best.onnx
+!models/pencil_tennis_yolo26n_best.engine
+
+# Local full-project and original-media backups
+backups/
 
 # ROS 2 generated directories
 ros2_ws/build/
