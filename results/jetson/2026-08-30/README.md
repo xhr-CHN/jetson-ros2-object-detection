@@ -49,9 +49,8 @@ TensorRT Engine 是在本次 Jetson 环境中生成的部署产物。JetPack、T
 ## 文件
 
 - [`deployment_evidence.txt`](deployment_evidence.txt)：从 Jetson 导出的原始系统、模型、ROS 2和速度记录。
-- [`jetson_demo_01.mp4`](jetson_demo_01.mp4)：37.63秒，1306 × 992，H.264，16 FPS；抽检画面显示 `pencil` 置信度0.88、实时速度16.3 FPS。SHA256：`0B9E6D970A125D0CBDA212C508B24375E00123F79239898DF420265CE5FB6583`。
-- [`jetson_demo_02.mp4`](jetson_demo_02.mp4)：41.50秒，1784 × 1346，H.264，16 FPS；抽检画面显示 `tennis_ball` 置信度0.90、实时速度17.8 FPS。SHA256：`7D6AB79D53B6D664BAD8EC0F2E16FFB3BF8E932D11414DAD6FD521717A6CA32D`。
+- [`jetson_demo.mp4`](jetson_demo.mp4)：最终板端演示视频，29.76秒，1306 × 992，H.264 Main、`yuv420p`、约16 FPS，包含 AAC双声道音频。第8秒与第20秒的抽检画面均同时显示铅笔和网球检测，画面实时速度为16.9–17.2 FPS。SHA256：`8D004988EB5021C3C0BEACEDF09E17637402166DB50598898170D7E3178BA28C`。
 
-两个 MP4 均由无音频的 VP8 WebM 原始录屏转换得到，使用 H.264 High、`yuv420p` 和 MP4 `faststart`。转换后已完成全片解码检查，时长与源文件的差值分别为0.05秒和0.06秒。原始 WebM 按原哈希保存在本地 `backups/` 目录，不进入 Git 仓库。
+最终视频已经完成全片音视频解码检查，没有重新转码。此前分别展示铅笔和网球的 `jetson_demo_01.mp4`、`jetson_demo_02.mp4` 已移入本地 `backups/` 目录，并可从早期 Git提交恢复；它们不再出现在当前 GitHub 文件列表中。原始 WebM 同样按原哈希保存在本地备份中。
 
 原始证据是在旧提交 `f95c2e9` 上采集的。该提交仅因作者身份和提交消息不规范，被代码树完全相同的规范提交 `2e15f0d` 替代；检测代码内容未发生变化。

@@ -169,7 +169,7 @@ ros2 launch pencil_tennis_detector detector.launch.py \
 
 - 完整结果说明：[`results/jetson/2026-08-30/README.md`](results/jetson/2026-08-30/README.md)
 - 原始部署证据：[`results/jetson/2026-08-30/deployment_evidence.txt`](results/jetson/2026-08-30/deployment_evidence.txt)
-- 演示视频：[`jetson_demo_01.mp4`](results/jetson/2026-08-30/jetson_demo_01.mp4)、[`jetson_demo_02.mp4`](results/jetson/2026-08-30/jetson_demo_02.mp4)
+- 最终演示视频：[`jetson_demo.mp4`](results/jetson/2026-08-30/jetson_demo.mp4)
 
 上述记录证明板端部署、ROS 2 发布和速度指标已经完成，但只包含一个明确的检测结果样例，不能替代不少于20个物体、正确率不低于80%的独立人工验收。因此“完成20个物体的验收测试”仍保持未勾选。
 
