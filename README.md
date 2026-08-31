@@ -1,3 +1,5 @@
+[中文](README.md) | [English](README_EN.md)
+
 # Jetson ROS 2 目标检测实验
 
 ## 实验目标
