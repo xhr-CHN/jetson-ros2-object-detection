@@ -1,25 +1,21 @@
-"""Prepare publication-ready copies of verified experiment evidence.
+"""Prepare colour, publication-ready copies of verified experiment evidence.
 
-Charts are converted to grayscale for the black-and-white report layout.  Real
-photographs and detection screenshots retain their original colour and aspect
+Every source image retains its original colour, pixel dimensions and aspect
 ratio.  Source artifacts are never modified.
 """
 
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "report" / "figures"
 
-MONOCHROME_ASSETS = {
+ASSETS = {
     "training_results.png": ROOT / "results" / "training" / "yolo26n_augmented" / "results.png",
     "test_pr_curve.png": ROOT / "results" / "test" / "yolo26n" / "validation" / "BoxPR_curve.png",
     "test_confusion_matrix.png": ROOT / "results" / "test" / "yolo26n" / "validation" / "confusion_matrix_normalized.png",
-}
-
-COLOUR_PHOTOS = {
     "detection_pencil.png": ROOT / "results" / "test" / "yolo26n" / "predictions" / "pencil_green30.jpg",
     "detection_tennis.png": ROOT
     / "results"
@@ -46,34 +42,19 @@ COLOUR_PHOTOS = {
 }
 
 
-def convert_monochrome(source: Path, destination: Path) -> None:
+def copy_colour_image(source: Path, destination: Path) -> None:
     if not source.is_file():
         raise FileNotFoundError(source)
     with Image.open(source) as image:
-        grayscale = ImageOps.grayscale(image)
-        grayscale = ImageOps.autocontrast(grayscale, cutoff=0.2)
-        grayscale.convert("RGB").save(destination, optimize=True)
-
-
-def copy_colour_photo(source: Path, destination: Path) -> None:
-    if not source.is_file():
-        raise FileNotFoundError(source)
-    with Image.open(source) as image:
-        # No resize or crop: Pillow preserves the source pixel dimensions and
-        # therefore the original aspect ratio.
+        # No grayscale conversion, resize or crop.
         image.convert("RGB").save(destination, optimize=True)
 
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, source in MONOCHROME_ASSETS.items():
+    for name, source in ASSETS.items():
         destination = OUT / name
-        convert_monochrome(source, destination)
-        print(f"{name}: {destination.stat().st_size} bytes")
-
-    for name, source in COLOUR_PHOTOS.items():
-        destination = OUT / name
-        copy_colour_photo(source, destination)
+        copy_colour_image(source, destination)
         print(f"{name}: {destination.stat().st_size} bytes")
 
     video_frame = OUT / "jetson_realtime.png"

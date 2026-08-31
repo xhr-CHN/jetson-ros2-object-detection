@@ -177,7 +177,7 @@ ros2 launch pencil_tennis_detector detector.launch.py \
 
 ## 实验报告
 
-最终LaTeX实验报告位于 [`report/experiment1_object_detection_report.pdf`](report/experiment1_object_detection_report.pdf)，源码位于 [`report/main.tex`](report/main.tex)。报告采用A4单栏排版，正文小四号宋体，英文和数字使用Times New Roman；表格、曲线、流程图和GitHub截图保持黑白，真实检测照片及Jetson画面保留原始彩色与原始宽高比。报告包含训练曲线、独立测试PR曲线与混淆矩阵、Jetson实时画面、40项验收、唯一错误案例以及真实GitHub提交截图。
+最终LaTeX实验报告位于 [`report/experiment1_object_detection_report.pdf`](report/experiment1_object_detection_report.pdf)，源码位于 [`report/main.tex`](report/main.tex)。报告采用A4单栏排版，正文小四号宋体，英文和数字使用Times New Roman；全部图片均保留彩色版本及原始宽高比，正文、标题、流程图线条和三线表保持黑白。报告包含训练曲线、独立测试PR曲线与混淆矩阵、Jetson实时画面、40项验收、唯一错误案例以及真实GitHub提交截图。
 
 可在另一个已经 source 工作空间的终端检查：
 

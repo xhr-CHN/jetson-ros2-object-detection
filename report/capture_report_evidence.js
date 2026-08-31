@@ -9,7 +9,6 @@ async function captureGitHub(page, url, filename) {
   await page.evaluate(() => {
     document.documentElement.style.background = "white";
     document.body.style.background = "white";
-    document.body.style.filter = "grayscale(1)";
   });
   await page.screenshot({ path: path.join(figures, filename), fullPage: false });
 }
@@ -28,7 +27,7 @@ async function captureGitHub(page, url, filename) {
     "github_commits.png"
   );
   await browser.close();
-  console.log("Captured monochrome GitHub repository and commit-history evidence.");
+  console.log("Captured colour GitHub repository and commit-history evidence.");
 })().catch((error) => {
   console.error(error);
   process.exitCode = 1;

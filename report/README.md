@@ -1,13 +1,13 @@
 # LaTeX 实验报告
 
-最终报告采用 XeLaTeX/Tectonic 编译，版式为 A4 单栏课程实验报告：正文小四号宋体，英文和数字使用 Times New Roman，标题使用黑体，全部表格使用 `booktabs` 三线表。表格、曲线、流程图和 GitHub 截图使用黑白样式；真实检测照片、验收样例和 Jetson 视频帧保留原始彩色与原始宽高比。
+最终报告采用 XeLaTeX/Tectonic 编译，版式为 A4 单栏课程实验报告：正文小四号宋体，英文和数字使用 Times New Roman，标题使用黑体，全部表格使用 `booktabs` 三线表。所有图片均使用彩色版本并保持原始宽高比；正文、标题、流程图线条和表格保持黑白排版。
 
 ## 文件
 
 - `main.tex`：报告正文及自定义模板。
 - `references.bib`：引用来源清单（正文使用内置参考文献表，便于单文件编译）。
 - `figures/`：由项目真实训练、测试、Jetson 和 GitHub 记录整理的证据图。
-- `prepare_report_assets.py`：按“数据图黑白、真实照片彩色”的规则重建报告图片。
+- `prepare_report_assets.py`：按原始彩色与原始宽高比重建报告图片。
 - `experiment1_object_detection_report.pdf`：最终编译并逐页检查的 PDF。
 
 ## 编译
